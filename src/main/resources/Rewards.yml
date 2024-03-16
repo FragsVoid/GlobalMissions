@@ -1,0 +1,14 @@
+Money: 2000
+Rewards:
+  '1':
+    material: IRON_SWORD
+    name: "&cThe sword"
+    amount: 1
+    enchantments:
+      SHARPNESS: 2
+  '2':
+    material: DIAMOND_AXE
+    name: "&cThe axe"
+    amount: 1
+    enchantments:
+      SHARPNESS: 2

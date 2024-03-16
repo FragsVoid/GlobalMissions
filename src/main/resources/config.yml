@@ -1,0 +1,54 @@
+Enabled: false
+Goal: 50
+Chat-message: true
+Mission-start: "&c&lHa empezado una mision!"
+Mission-finish: "&cLa mision ha sido completada!"
+Title-message: true
+Mission-start-title: "&c&lHa empezado una mision!"
+Mission-start-subtitle: "&cDeben {mission} a {goal} mobs!"
+Mission-finish-title: "&cLa mision ha sido completada!"
+Mission-finish-subtitle: ""
+#In ticks 20 ticks = 1sec
+Title-time: 60
+SendSound: true
+#List of sounds: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
+Start-Sound: "BLOCK_ANVIL_HIT"
+Finish-Sound: "BLOCK_ANVIL_HIT"
+
+Money-message: "&cHas recibido {money}$"
+
+#This is an example!
+#REALLY IMPORTANT RECOMMENDATIONS
+#THIS CHANGES WILL ONLY WORK AFTER A RESTART/RELOAD (Optimization purposes)
+#I HEAVILY RECOMMEND TO ONLY HAVE ONE EVENT AT A TIME, IF NOT SOME PLACEHOLDERS COULD BUG
+#OR COUNTING TWICE FOR A MISSION WILL HAPPEN
+#IF YOU WANT TO ENABLE AN EVENT, ERASING (#) BEFORE THE WORDS CORRESPONDING TO THE EVENT
+#WILL MAKE IT WORK, TAKE INTO ACCOUNT THAT THIS WILL BE ENABLED AFTER RESTARTING/RELOADING
+#TO CHANGE AN EVENT, JUST WRITE AGAIN (#) BEFORE ALL THE LINES CORRESPONDING TO THE EVENT
+#ANY QUESTIONS CAN BE ASKED TO THE DEVELOPER IN DISCORD (fragsvoid)
+######################################################################
+#Break:
+#  material:
+#    - STONE
+#    - DIRT
+#Follow this structure please.
+######################################################################
+#Place:
+#  material:
+#    - STONE
+#    - DIRT
+######################################################################
+#Kill:
+#  mobs:
+#    - SKELETON
+#    - CREEPER
+######################################################################
+#Breed:
+#  animals:
+#    - COW
+#    - PIG
+######################################################################
+#Move: true
+######################################################################
+
+
