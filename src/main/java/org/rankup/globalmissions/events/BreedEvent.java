@@ -2,15 +2,15 @@ package org.rankup.globalmissions.events;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.Material;
 import org.bukkit.Sound;
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityBreedEvent;
 import org.rankup.globalmissions.GlobalMissions;
+
+import java.util.Objects;
 
 public class BreedEvent implements Listener {
 
@@ -58,24 +58,25 @@ public class BreedEvent implements Listener {
                 for (Player players : Bukkit.getOnlinePlayers()) {
                     if (plugin.getConfig().getBoolean("Chat-message")) {
                         players.sendMessage(ChatColor.translateAlternateColorCodes('&',
-                                plugin.getConfig().getString("Mission-finish")).replace("{mission}",
+                                Objects.requireNonNull(plugin.getConfig().getString("Mission-finish"))).replace("{mission}",
                                 plugin.getMission()).replace("{goal}",
                                 plugin.getGoal()));
                     }
 
                     if (plugin.getConfig().getBoolean("Title-message")) {
                         players.sendTitle(ChatColor.translateAlternateColorCodes('&',
-                                        plugin.getConfig().getString("Mission-finish-title")).replace("{mission}",
+                                        Objects.requireNonNull(plugin.getConfig().getString("Mission-finish-title"))).replace("{mission}",
                                         plugin.getMission()).replace("{goal}",
                                         plugin.getGoal())
                                 ,ChatColor.translateAlternateColorCodes('&',
-                                        plugin.getConfig().getString("Mission-finish-subtitle")).replace("{mission}",
+                                        Objects.requireNonNull(plugin.getConfig().getString("Mission-finish-subtitle"))).replace("{mission}",
                                         plugin.getMission()).replace("{goal}",
                                         plugin.getGoal()),1,
                                 plugin.getConfig().getInt("Title-time"), 1);
                     }
 
                     if (plugin.getConfig().getBoolean("SendSound")) {
+                        assert sound != null;
                         players.playSound(players.getLocation(),
                                 sound, 3.0F,0.5F);
                     }
