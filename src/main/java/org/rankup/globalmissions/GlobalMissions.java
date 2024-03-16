@@ -56,6 +56,7 @@ public final class GlobalMissions extends JavaPlugin {
             getServer().getPluginManager().disablePlugin(this);
         }
         new MissionExpansion(this).register();
+        System.out.println("GlobalMissions enabled.");
     }
 
     @Override
